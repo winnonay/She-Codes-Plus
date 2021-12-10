@@ -1,0 +1,58 @@
+body {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-family: "Montagu Slab", serif;
+  background-image: url(clouds.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+h1 {
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  padding: 10px;
+  color: white;
+}
+
+.location {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.container {
+  text-align: center;
+  color: white;
+  border: solid thin white;
+  border-radius: 2px;
+  padding: 20px;
+  max-width: 50em;
+  margin: 0 auto;
+}
+.card-title {
+  font-size: 30px;
+}
+.col {
+  font-size: 25px;
+}
+.light {
+  color: #f5f563;
+}
+.icon-mon {
+  color: #aeaeae;
+}
+.icon-tues {
+  color: #4c8cf4;
+}
+.icon-weds {
+  color: #b4bcf7;
+}
+.icon-thurs {
+  color: #f7b888;
+}
+.icon-fri {
+  color: #f5f563;
+}
