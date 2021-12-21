@@ -28,7 +28,7 @@ function showTemp(response) {
   let windElement = document.querySelector("#wind");
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = response.data.wind.speed;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 function handleSubmit(event) {
   event.preventDefault();
