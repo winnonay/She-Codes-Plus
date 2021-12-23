@@ -18,7 +18,6 @@ current.innerHTML = `${day} ${hour}:${minute}`;
 //Seaching City & Temperature
 
 function showTemp(response) {
-  console.log(response.data.name);
   document.querySelector("#current-city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -36,7 +35,7 @@ function showTemp(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
-  temperatureConvert.innerHTML = Math.round(`${temperature}` * 1.8 + 32);
+  temperatureConvert.innerHTML = Math.round(response.data.main.temp * 1.8 + 32);
 }
 function handleSubmit(event) {
   event.preventDefault();
