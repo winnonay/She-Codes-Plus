@@ -1,7 +1,7 @@
 body {
   font-family: "Mochiy Pop One", sans-serif;
   font-family: "Montagu Slab", serif;
-  background-image: url(lightbulbs.jpg);
+  background-image: url(lb.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -41,20 +41,5 @@ h2 {
   font-size: 25px;
 }
 .light {
-  color: #f5f563;
-}
-.icon-mon {
-  color: #aeaeae;
-}
-.icon-tues {
-  color: #4c8cf4;
-}
-.icon-weds {
-  color: #b4bcf7;
-}
-.icon-thurs {
-  color: #f7b888;
-}
-.icon-fri {
   color: #f5f563;
 }

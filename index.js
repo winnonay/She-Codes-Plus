@@ -9,9 +9,13 @@ let days = [
   "Friday",
   "Saturday",
 ];
+
 let day = days[now.getDay()];
 let hour = now.getHours();
 let minute = now.getMinutes();
+if (minute < 10) {
+  minute = `0${minute}`;
+}
 let current = document.querySelector("h2");
 current.innerHTML = `${day} ${hour}:${minute}`;
 
@@ -52,3 +56,42 @@ function search(city) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+//Add Forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Mon", "Tue", "Wed", "Thurs", "Fri", "Sat"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="col-2">
+  <div class="weather-forecast-date">${day}</div>
+  <img 
+  src="http://openweatherapp.org/img/wn/50d@2x.png"
+  alt=""
+  width="42"
+  />
+  <div class="weather-forecast-temperatures">
+    <span class="weather-forecast-temperature-max">
+     20° : 
+    </span>
+        <span class="weather-forecase-temperature-min">
+         10°
+        </span>
+  </div>
+  </div>
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "60462b3bc0c4ae404c2c0d6dfb41aa2b";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+displayForecast();
