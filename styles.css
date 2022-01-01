@@ -1,12 +1,16 @@
 body {
   font-family: "Mochiy Pop One", sans-serif;
   font-family: "Montagu Slab", serif;
-  background-image: url(lb.jpg);
-  background-repeat: no-repeat;
+  background-image: url("sakura.gif");
   background-size: 100%;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  color: #d5b9e7;
 }
 h1 {
-  color: white;
+  color: #d5b9e7;
   text-align: center;
   padding: 20px;
 }
@@ -17,7 +21,7 @@ h2 {
   text-align: center;
   font-size: 30px;
   padding: 10px;
-  color: white;
+  color: #d5b9e7;
 }
 
 .location {
@@ -27,7 +31,7 @@ h2 {
 
 .container {
   text-align: center;
-  color: white;
+  color: #d5b9e7;
   border: solid thin white;
   border-radius: 2px;
   padding: 20px;
@@ -42,4 +46,9 @@ h2 {
 }
 .light {
   color: #f5f563;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
