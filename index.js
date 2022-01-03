@@ -1,3 +1,4 @@
+//Date and Time
 let now = new Date();
 let days = [
   "Sunday",
@@ -18,7 +19,7 @@ if (minute < 10) {
 let current = document.querySelector("h2");
 current.innerHTML = `${day} ${hour}:${minute}`;
 
-//Seaching City & Temperature
+//Temperature Input
 
 function showTemp(response) {
   document.querySelector("#current-city").innerHTML = response.data.name;
@@ -41,6 +42,8 @@ function showTemp(response) {
   getForecast(response.data.coord);
   temperatureConvert.innerHTML = Math.round(response.data.main.temp * 1.8 + 32);
 }
+
+//Search location
 function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#search-input-text").value;
@@ -53,6 +56,13 @@ function search(city) {
 
   axios.get(apiUrl).then(showTemp);
 }
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(search);
+}
+
+let currentLocationButton = document.querySelector("#location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
