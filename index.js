@@ -59,10 +59,9 @@ function search(city) {
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(search);
+  let currentLocationButton = document.querySelector("#location-button");
+  search(currentLocationButton.value);
 }
-
-let currentLocationButton = document.querySelector("#location-button");
-currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
