@@ -7,10 +7,10 @@ body {
   background-attachment: fixed;
   height: 100%;
   width: 100%;
-  color: #d5b9e7;
+  color: #7cb6e2;
 }
 h1 {
-  color: #d5b9e7;
+  color: #7cb6e2;
   text-align: center;
   padding: 20px;
 }
@@ -21,7 +21,7 @@ h2 {
   text-align: center;
   font-size: 30px;
   padding: 10px;
-  color: #d5b9e7;
+  color: #7cb6e2;
 }
 
 .location {
@@ -31,7 +31,7 @@ h2 {
 
 .container {
   text-align: center;
-  color: #d5b9e7;
+  color: #7cb6e2;
   border: solid thin white;
   border-radius: 2px;
   padding: 20px;
